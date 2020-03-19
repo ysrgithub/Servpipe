@@ -1,4 +1,4 @@
-pipeline {
+ipipeline {
    agent any
    tools{
        jdk 'JDK1.8'
@@ -22,7 +22,7 @@ pipeline {
         checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: 'f06c68d4-7b33-4388-8d34-ec01f4bc7a85', url: 'https://github.com/ysrgithub/Servpipe.git']]])
 }
 }
-    stage ('Building the Souce using Maven') {
+     stage ('Building the Source using Maven') {
           steps {
               sh 'mvn clean compile install'
           }
